@@ -1,0 +1,18 @@
+{
+  "name": "api-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "g": "generate-testcase rest -f feature/Login-Scenario.feature -d script/Login-Scenario.ts -helpers src/resolver/LoginResolver.ts -steps src/step/SetAccessToken.ts",
+    "j": "generate-testcase jmeter -f feature/Login-Scenario.feature -d jmeter/Login-Scenario.jmx",
+    "t": "cucumber-js feature/Login-Scenario.feature -r 'node_modules/@aaxis/cucumber-utilities/lib/gherkins/index.js' -r 'config/Login.ts' -r src/step/SetAccessToken.ts -r 'script/Login-Scenario.ts' -f json:report/cucumber-report.json --require-module ts-node/register"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aaxis/cucumber-utilities": "^0.0.12",
+    "qs": "^6.9.4"
+  }
+}

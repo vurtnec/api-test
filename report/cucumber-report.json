@@ -1,0 +1,427 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Login",
+    "line": 1,
+    "id": "login",
+    "tags": [],
+    "uri": "feature/Login-Scenario.feature",
+    "elements": [
+      {
+        "id": "login;login-successfully",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Login Successfully",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/hooks/SetFeatureContextHook.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/hooks/SetDefaultStepTimeoutHook.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "config/Login.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "set scenario variables from data/UserInfo.json",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/SetScenarioVariableFrom.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "set scenario variables from data/TabithaJobBoard.json",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/SetScenarioVariableFrom.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "set header Content-Type to application/x-www-form-urlencoded",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/SetHeader.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "set header Authorization to Basic R29CUklJY0hHY3NTNGwwOGl6QnBEUkhVdUx3NWd0OFg6WEMweUVyWlhEYThkb3Vadw==",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/SetHeader.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "logged in tabitha account visit Mobile App with post:/v1.1/ecomm-idp/token and data/login.json.",
+            "match": {
+              "location": "script/Login-Scenario.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2360000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "response body path refresh_token_status should be equal to scenario variable refresh_token_status",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/AssertResponseBodyPathValueShouldBeScenarioVariable.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "put the value of body path access_token as access_token in scenario scope",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/PutScenarioVariableFromResponseBody.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "put the value of body path refresh_token as refresh_token in scenario scope",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/PutScenarioVariableFromResponseBody.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "set access token from access_token to Authorization header",
+            "match": {
+              "location": "src/step/SetAccessToken.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "Try to get user job account information from get:/v1.1/ecomm/currentUser/jobBoard.",
+            "match": {
+              "location": "script/Login-Scenario.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1731000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "response body path userTier should be equal to scenario variable userTier",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/AssertResponseBodyPathValueShouldBeScenarioVariable.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "response body path customerRole should be equal to scenario variable customerRole",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/AssertResponseBodyPathValueShouldBeScenarioVariable.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;login-failed-with-wrong-password",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Login Failed with Wrong Password",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/hooks/SetFeatureContextHook.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/hooks/SetDefaultStepTimeoutHook.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "config/Login.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "set scenario variables from data/error.ts[WrongPasswordError]",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/SetScenarioVariableFrom.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "set header Content-Type to application/x-www-form-urlencoded",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/SetHeader.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "set header Authorization to Basic R29CUklJY0hHY3NTNGwwOGl6QnBEUkhVdUx3NWd0OFg6WEMweUVyWlhEYThkb3Vadw==",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/SetHeader.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "logged in tabitha account with wrong token to visit Mobile App with post:/v1.1/ecomm-idp/token and data/login.request.ts[LoginRequestsTabithaWrongPassword].",
+            "match": {
+              "location": "script/Login-Scenario.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1823000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "response body path message[0].status should be equal to scenario variable status",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/AssertResponseBodyPathValueShouldBeScenarioVariable.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;login-failed-with-wrong-token",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "Login Failed with Wrong Token",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/hooks/SetFeatureContextHook.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/hooks/SetDefaultStepTimeoutHook.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "config/Login.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 32,
+            "name": "set scenario variables from data/error.ts[WrongTokenError]",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/SetScenarioVariableFrom.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "set header Content-Type to application/x-www-form-urlencoded",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/SetHeader.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "set header Authorization to Basic R29CUklJY0hHY3NTNG",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/SetHeader.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "logged in tabitha account with wrong token to visit Mobile App with post:/v1.1/ecomm-idp/token and data/login.request.ts[LoginRequestsTabithaWrongPassword].",
+            "match": {
+              "location": "script/Login-Scenario.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1050000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "response body path message[0] should be equal to scenario variable message",
+            "match": {
+              "location": "node_modules/@aaxis/cucumber-utilities/lib/gherkins/predefined/AssertResponseBodyPathValueShouldBeScenarioVariable.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

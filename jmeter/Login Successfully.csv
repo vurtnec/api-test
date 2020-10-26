@@ -1,0 +1,2 @@
+login 1,endpoint 1,Content-Type,Token
+data/login.json,post:/v1.1/ecomm-idp/token,application/x-www-form-urlencoded,Basic R29CUklJY0hHY3NTNGwwOGl6QnBEUkhVdUx3NWd0OFg6WEMweUVyWlhEYThkb3Vadw==
